@@ -1,80 +1,440 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>哈哈哈哈</title>
-  <style type="text/css">
-    * {
-      padding: 0;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello BTBU!</title>
+    <style>
+        @font-face {
+            font-family: myfont;
+            src: url(font/禹卫书法行书简体优化版.ttf);
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
 
-    body {
-      background-color: gray;
-    }
+        body {
+            background-image: url(media/背景.jpg);
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
 
-.logo {
-  width: 1080px;
-  height: 50px;
-  /* background-color: indianred; */
-  margin: 15px auto 0;
-  line-height: 50px;
-  font-weight: 700;
-  font-size: 40px;
-  color: white;
-  
-  
-}
+        .kuan {
+            width: 1080px;
+            height: 1920px;
+            /* background-color: rgb(150, 150, 148); */
+            margin: 0 auto;
+        }
 
-.contact {
-  float: right;
-  font-size: 20px;
-  margin-right: 10px;
-  
-}
+        .qishi {
+            width: 100px;
+            height: 100px;
+            /* background-color: rgb(228, 10, 10); */
+            background-image: url(media/70.png);
+            background-size: 100px 100px;
+            float: left;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-    .one {
-      width: 1080px;
-      height: 500px;
-      margin: 0 auto;
-      margin-top: 15px;
-      text-align: center;
-      
-      border-radius: 30px;
-      background-image: url(images/爱心.jpg);
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      /* background: rgba(0, 0, 0, .3); */
-    }
+        .xiaohui {
+            width: 100px;
+            height: 100px;
+            /* background-color: rgb(38, 35, 221); */
+            background-image: url(media/校徽.png);
+            background-size: 100px 100px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 40px;
+        }
 
-    audio {
-      margin-top: 15px;
-      outline: none;
-    }
-    .contact a:hover {
-      color: violet;
-    }
-  </style>
+        .one {
+            background-image: url(media/1.svg);
+            background-size: 150px 150px;
+
+            background-repeat: no-repeat;
+
+            /* background-color: rgb(104, 20, 20); */
+            width: 150px;
+            height: 150px;
+            position: relative;
+            top: 275px;
+            left: 50%;
+            margin-left: -200px;
+            transform: scale(0, 0);
+            animation: dongone 1.5s ease 3s;
+        }
+
+        .two {
+            background-image: url(media/2.svg);
+            background-size: 150px 150px;
+            background-repeat: no-repeat;
+
+            /* background-color: rgb(104, 20, 20); */
+            width: 150px;
+            height: 150px;
+            position: relative;
+            top: 275px;
+            left: 50%;
+            margin-left: -200px;
+            transform: scale(0, 0);
+            animation: dongtwo 1.5s ease 1.5s;
+        }
+
+        .three {
+            background-image: url(media/3.svg);
+            background-size: 150px 150px;
+            background-repeat: no-repeat;
+            /* background-color: rgb(104, 20, 20); */
+            width: 150px;
+            height: 150px;
+            position: relative;
+            top: 275px;
+            left: 50%;
+            margin-left: -200px;
+            transform: scale(0,0);
+            animation: dongthree 1.5s ease 0s;
+        }
+
+        .zhong {
+            width: 400px;
+            height: 400px;
+            /* background-color: rgb(16, 74, 150); */
+            background-image: url(media/钟.png);
+            background-size: 400px 400px;
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            margin-left: -200px;
+            animation: zhong 4.5s ease-in-out forwards;
+        }
+
+        .zhizhenone {
+            width: 130px;
+            height: 40px;
+            /* background-color: rgb(11, 119, 110); */
+            background-image: url(media/指针.png);
+            background-repeat: no-repeat;
+            background-size: 130px 25px;
+            background-position: 0px 7.5px;
+            position: absolute;
+            top: 330px;
+            left: 50%;
+            margin-left: -20px;
+            animation: zhizhenone 60s linear 4.5s infinite;
+            /* transform: rotate(342deg); */
+            transform-origin: 20px 20px;
+            transform: scale(0, 0);
+        }
+        .zhizhentwo {
+            width: 100px;
+            height: 40px;
+            /* background-color: rgb(11, 119, 110); */
+            background-image: url(media/指针.png);
+            background-repeat: no-repeat;
+            background-size: 100px 25px;
+            background-position: 0px 7.5px;
+            position: absolute;
+            top: 330px;
+            left: 50%;
+            margin-left: -20px;
+            animation: zhizhentwo 86400s linear 4.5s infinite;
+            /* transform: rotate(342deg); */
+            transform-origin: 20px 20px;
+            transform: scale(0, 0);
+        }
+
+        .jiantou {
+            width: 40px;
+            height: 0px;
+            /* background-color: rgb(199, 231, 18); */
+            background-image: url(media/箭头.png);
+            background-size: 40px 800px;
+            /* background-position: 0px ; */
+            position: absolute;
+            top: 700px;
+            left: 50%;
+            margin-left: -20px;
+            animation: jiantou 2s ease 5s forwards;
+            /* transform: scaleY(0); */
+            transform-origin: 0px 0px;
+        }
+        p {
+            font-family: myfont;
+            font-size: 100px;
+            color: ivory;
+        }
+        .ai {
+            /* background-color: rgb(75, 1, 75); */
+            font-family: myfont;
+            color: ivory;
+            font-size: 100px;
+            position: absolute;
+            top: 1600px;
+            left: 50%;
+            margin-left: -470px;
+            transform: scale(0,0);
+            animation: ai 2s ease-in-out 6.5s forwards;
+        }
+        .qi {
+            width: 100px;
+            height: 750px;
+            /* background-color: rgb(24, 126, 209); */
+            position: absolute;
+            top: 700px;
+            left: 50%;
+            /* margin-left: -200px; */
+            transform: scale(0,0);
+            animation: qi 2s ease 4.5s forwards;
+        }
+        
+        .fen {
+            width: 100px;
+            height: 750px;
+            /* background-color: rgb(24, 209, 163); */
+            position: absolute;
+            top: 780px;
+            left: 50%;
+            /* margin-left: 100px; */
+            transform: scale(0,0);
+            animation: fen 2s ease 5s forwards;
+        }
+        .zz {
+            width: 140px;
+            height: 20px;
+            /* background-color: rgb(166, 168, 8); */
+            position: fixed;
+            bottom: 20px;
+            right: 0px;
+            color: ivory;
+            font-weight: lighter;           
+        }
+        .xiaxian {
+            width: 0px;
+            height: 5px;
+            background-color: rgb(248, 248, 245); 
+            position: absolute;
+            top: 1470px;
+            left: 50%; 
+            margin-left: -200px;
+            animation: xiaxian 1s ease 6s forwards;   
+            transform-origin: 0px 0px;
+        }
+        .shangxian {
+            width: 0px;
+            height: 5px;
+            background-color: rgb(248, 248, 245); 
+            position: absolute;
+            top: 730px;
+            left: 50%; 
+            margin-left: 100px;
+            animation: shangxian 1s ease 6s forwards;    
+            transform-origin: 100px 0px;        
+        }
+        @keyframes dongthree {
+
+            0% {
+                transform: translate(0px, 0px) scale(0, 0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translate(125px, 0px) scale(1, 1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(250px, 0px) scale(0, 0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes dongtwo {
+
+            0% {
+                transform: translate(0px, -150px) scale(0, 0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translate(125px, -150px) scale(1, 1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(250px, -150px) scale(0, 0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes dongone {
+            0% {
+                transform: translate(0px, -300px) scale(0, 0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translate(125px, -300px) scale(1, 1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(250px, -300px) scale(0, 0);
+                opacity: 0;
+            }
+        }
+        @keyframes zhong {
+            from {
+                transform: rotate(0deg);
+                
+            }
+            to {
+                transform: rotate(90deg);
+                
+            }
+        }
+        @keyframes zhizhenone {
+            0% {
+                transform: rotate(-90deg);
+
+            }
+
+            100% {
+                transform: rotate(270deg);
+
+            }
+        }
+        @keyframes zhizhentwo {
+            0% {
+                transform: rotate(-90deg);
+
+            }
+
+            100% {
+                transform: rotate(270deg);
+
+            }
+        }
+        @keyframes jiantou {
+            0% {
+                
+                height: 0px;
+            }
+            
+            100% {
+                
+                height: 800px;
+            }
+        }
+        @keyframes ai {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes qi {
+            from {
+                transform: translateX(0px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-200px);
+                opacity: 1;
+            }
+        }
+        @keyframes fen {
+            from {
+                transform: translateX(0px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(100px);
+                opacity: 1;
+            }
+        }
+        @keyframes xiaxian {
+            from {
+                transform: translateX(-100px); 
+                width: 0px;
+            }
+            to {
+                transform: translateX(0);
+                width: 100px;
+            }
+        }
+        @keyframes shangxian {
+            from {
+                transform: translateX(100px);
+                width: 0px;
+            }
+            to {
+                transform: translateX(0) scale(1,1);
+                width: 100px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-  <header>
-    <div class="logo">XYeeme.top
-      <div class="contact"><a href="#">QQ or Wechat</a></div>
+    <div class="qishi">
+
     </div>
-    
-  </header>
-  <div class="one">
-    <audio src="medias/贵族乐团 - 寂静之声.mp3" controls="controls"></audio>
-  </div>
-  <div class="one">
-    <audio src="medias/Dexter Britain - Nothing To Fear.mp3" controls="controls"></audio>
-  </div>
+    <div class="xiaohui">
+
+    </div>
+    <div class="kuan">
+        <div class="zhong">
+        </div>
+        <div class="zhizhentwo">
+        </div>
+        <div class="zhizhenone">
+        </div>
+        
+        <div class="three">
+        </div>
+        <div class="two">
+        </div>
+        <div class="one">
+        </div>
+        <div class="jiantou">
+        </div>
+        <div class="qi">
+            <p>七</p>
+            <p>秩</p>
+            <p>北</p>
+            <p>工</p>
+            <p>商</p>
+            
+        </div>
+        <div class="fen">
+            
+            <p>奋</p>
+            <p>进</p>
+            <p>新</p>
+            <p>时</p>
+            <p>代</p>
+        </div>
+    </div>
+    <div class="zz">
+        <span>作</span>
+        <span>者</span>&nbsp;
+        <span>|</span>&nbsp;
+        <span>陶</span>
+        <span>雪</span>
+        <span>艺</span>
+    </div>
+    <div class="xiaxian"></div>
+    <div class="shangxian"></div>
+    <div class="ai">
+            祝北工商70周年快乐！  
+    </div>
 </body>
 
 </html>
