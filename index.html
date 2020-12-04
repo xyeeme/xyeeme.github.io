@@ -10,15 +10,17 @@
             font-family: myfont;
             src: url(font/禹卫书法行书简体优化版.ttf);
         }
+
         * {
             padding: 0;
             margin: 0;
         }
 
         body {
-            background-image: url(media/背景.jpg);
+            /* background-image: url(media/背景.jpg);
             background-size: 100% auto;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; */
+            background-image: linear-gradient(to right, rgb(0, 54, 111), rgb(210, 8, 20));
         }
 
         /* .kuan {
@@ -27,6 +29,15 @@
             background-color: rgb(150, 150, 148);
             margin: 0 auto;
         } */
+        .lan {
+            width: 100%;
+            height: 70px;
+            background-color: rgba(0, 0, 0, 0.1);
+            
+            position: absolute;
+
+
+        }
 
         .qishi {
             width: 40px;
@@ -34,9 +45,11 @@
             /* background-color: rgb(228, 10, 10); */
             background-image: url(media/校徽.png);
             background-size: 40px 40px;
+
             float: left;
             margin-top: 15px;
             margin-left: 15px;
+
         }
 
         .xiaohui {
@@ -45,9 +58,11 @@
             /* background-color: rgb(38, 35, 221); */
             background-image: url(media/70.png);
             background-size: 30px 30px;
+
             float: right;
             margin-top: 20px;
             margin-right: 15px;
+
         }
 
         .one {
@@ -67,7 +82,7 @@
             top: 100px;
             left: 50%;
             margin-left: -40px;
-            transform: scale(0,0);
+            transform: scale(0, 0);
             animation: dongone 1.5s ease 3s;
         }
 
@@ -87,7 +102,7 @@
             top: 100px;
             left: 50%;
             margin-left: -40px;
-            transform: scale(0,0);
+            transform: scale(0, 0);
             animation: dongtwo 1.5s ease 1.5s;
         }
 
@@ -107,7 +122,7 @@
             top: 100px;
             left: 50%;
             margin-left: -40px;
-            transform: scale(0,0);
+            transform: scale(0, 0);
             animation: dongthree 1.5s ease 0s;
         }
 
@@ -121,7 +136,7 @@
             top: 100px;
             left: 50%;
             margin-left: -100px;
-            
+
         }
 
         .zhizhenone {
@@ -139,8 +154,9 @@
             animation: zhizhenone 60s linear 4.5s infinite;
             transform: rotate(342deg);
             transform-origin: 10px 10px;
-            transform: scale(0,0);
+            transform: scale(0, 0);
         }
+
         .zhizhentwo {
             width: 55px;
             height: 20px;
@@ -174,11 +190,13 @@
             /* transform: scaleY(0); */
             transform-origin: 0px 0px;
         }
+
         p {
             font-family: myfont;
             font-size: 50px;
             color: ivory;
         }
+
         .ai {
             /* background-color: rgb(75, 1, 75); */
             font-family: myfont;
@@ -192,9 +210,10 @@
             top: 850px;
             left: 50%;
             margin-left: -180px;
-            transform: scale(0,0);
+            transform: scale(0, 0);
             animation: ai 2s ease-in-out 6.5s forwards;
         }
+
         .qi {
             width: 50px;
             height: 400px;
@@ -203,10 +222,10 @@
             top: 390px;
             left: 50%;
             /* margin-left: -200px; */
-            transform: scale(0,0);
+            transform: scale(0, 0);
             animation: qi 2s ease 4.5s forwards;
         }
-        
+
         .fen {
             width: 50px;
             height: 400px;
@@ -215,9 +234,10 @@
             top: 430px;
             left: 50%;
             /* margin-left: 100px; */
-            transform: scale(0,0);
+            transform: scale(0, 0);
             animation: fen 2s ease 5s forwards;
         }
+
         .zz {
             width: 100px;
             height: 20px;
@@ -229,33 +249,36 @@
             margin-left: -50px;
             font-size: 6px;
             color: ivory;
-            font-weight: lighter;  
+            font-weight: lighter;
             animation: zz 2.5s ease 7s forwards;
-            
+
             opacity: 0;
         }
+
         .xiaxian {
             width: 0px;
             height: 2px;
-            background-color: rgb(248, 248, 245); 
+            background-color: rgb(248, 248, 245);
             position: absolute;
             top: 775px;
-            left: 50%; 
+            left: 50%;
             margin-left: -100px;
-            animation: xiaxian 1s ease 6s forwards;   
+            animation: xiaxian 1s ease 6s forwards;
             transform-origin: 0px 0px;
         }
+
         .shangxian {
             width: 0px;
             height: 2px;
-            background-color: rgb(248, 248, 245); 
+            background-color: rgb(248, 248, 245);
             position: absolute;
             top: 410px;
-            left: 50%; 
+            left: 50%;
             margin-left: 50px;
-            animation: shangxian 1s ease 6s forwards;    
-            transform-origin: 50px 0px;        
+            animation: shangxian 1s ease 6s forwards;
+            transform-origin: 50px 0px;
         }
+
         @keyframes dongthree {
 
             0% {
@@ -308,6 +331,7 @@
                 opacity: 0;
             }
         }
+
         @keyframes zhizhenone {
             0% {
                 transform: rotate(-90deg);
@@ -319,6 +343,7 @@
 
             }
         }
+
         @keyframes zhizhentwo {
             0% {
                 transform: rotate(-90deg);
@@ -330,72 +355,85 @@
 
             }
         }
+
         @keyframes jiantou {
             0% {
-                
+
                 height: 0px;
             }
-            
+
             100% {
-                
+
                 height: 400px;
             }
         }
+
         @keyframes ai {
             from {
                 transform: translateY(-100px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0px);
                 opacity: 1;
             }
         }
+
         @keyframes qi {
             from {
                 transform: translateX(0px);
                 opacity: 0;
             }
+
             to {
                 transform: translateX(-100px);
                 opacity: 1;
             }
         }
+
         @keyframes fen {
             from {
                 transform: translateX(0px);
                 opacity: 0;
             }
+
             to {
                 transform: translateX(50px);
                 opacity: 1;
             }
         }
+
         @keyframes xiaxian {
             from {
-                transform: translateX(-100px); 
+                transform: translateX(-100px);
                 width: 0px;
             }
+
             to {
                 transform: translateX(0);
                 width: 50px;
             }
         }
+
         @keyframes shangxian {
             from {
                 transform: translateX(50px);
                 width: 0px;
             }
+
             to {
                 transform: translateX(0px);
                 width: 50px;
             }
         }
+
         @keyframes zz {
             from {
                 transform: translateY(-50px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0px);
                 opacity: 1;
@@ -406,55 +444,59 @@
 </head>
 
 <body>
+    <div class="lan">
+
+    </div>
     <div class="qishi">
 
     </div>
     <div class="xiaohui">
 
     </div>
-    <!-- <div class="kuan"> -->
-        <div class="zhong">
-        </div>
-        <div class="zhizhentwo">
-        </div>
-        <div class="zhizhenone">
-        </div>
-        
-        <div class="three">
-            3
-        </div>
-        <div class="two">
-            2
-        </div>
-        <div class="one">
-            1
-        </div>
-        <div class="jiantou">
-        </div>
-        <div class="qi">
-            <p>七</p>
-            <p>秩</p>
-            <p>北</p>
-            <p>工</p>
-            <p>商</p>
-            
-        </div>
-        <div class="fen">
-            
-            <p>奋</p>
-            <p>进</p>
-            <p>新</p>
-            <p>时</p>
-            <p>代</p>
-        </div>
-    <!-- </div> -->
+
+
+    <div class="zhong">
+    </div>
+    <div class="zhizhentwo">
+    </div>
+    <div class="zhizhenone">
+    </div>
+
+    <div class="three">
+        3
+    </div>
+    <div class="two">
+        2
+    </div>
+    <div class="one">
+        1
+    </div>
+    <div class="jiantou">
+    </div>
+    <div class="qi">
+        <p>七</p>
+        <p>秩</p>
+        <p>北</p>
+        <p>工</p>
+        <p>商</p>
+
+    </div>
+    <div class="fen">
+
+        <p>奋</p>
+        <p>进</p>
+        <p>新</p>
+        <p>时</p>
+        <p>代</p>
+    </div>
+
     <div class="zz">
         作&nbsp;者&nbsp;｜&nbsp;陶&nbsp;雪&nbsp;艺
     </div>
     <div class="xiaxian"></div>
     <div class="shangxian"></div>
     <div class="ai">
-            70周年快乐！  
+        70周年快乐！
     </div>
 </body>
 
